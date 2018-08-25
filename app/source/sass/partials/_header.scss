@@ -1,0 +1,15 @@
+header{
+    width: 100%;
+	float: left;
+	padding: 3% 4%;
+	background: linear-gradient(180deg, $purple, $darkPurple); 	
+    text-align: center;
+    .logo{
+        width:100px; 
+        height: 100px; 
+        float: left;
+        background: url(../img/logo-mobile.png) center center no-repeat;
+        font-size: 0; 
+    }
+    
+}

@@ -1,0 +1,81 @@
+<!doctype html>
+<html ng-app="app">
+
+   <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Estoqueando</title>	
+	<meta name="description" content="Aplicação para compra de produtos de catálogos">
+	<meta name="keywords" content="App, venda direta, comprar, Tupperware, Avon, Mary Kay, Hinode">
+	<meta name="robots" content="index, follow">
+    <meta author="Equipe Estoqueando: Dênis de Lima, Paloma Serra, Priscila Farias, Raul Pavan, Rayane Morais, Samara Lipolis">
+    <link rel="stylesheet" href="app/web/css/main.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans" >
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+	<link rel="icon" href="app/web/img/icon.ico">	
+</head>
+
+   <body>
+    <header>	
+		<a href="index.html"><h1 class="logo">Estoqueando</a></h1>
+		
+		<button class="btn-menu"><i class="fa fa-bars fa-lg"></i></button>
+
+			<nav class="menu">
+				<a class="btn-close">x</a>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="#">Utensílios</a></li>
+					<li><a href="#">Cosméticos</a></li>
+					<li><a href="#">Perfumaria</a></li>
+					<li><a href="#">Maquiagem</a></li>
+					<li><a href="#">Moda</a></li>				
+				</ul>				
+			</nav>		
+
+			<div class="menu-pesq">
+			<div id="divBusca">
+				<form action="" method="submit">
+					<input type="search" id="txtBusca" placeholder="Pesquisar"/>
+					<button class="btn-search"><a href="#"><i class="fa fa-search  fa-lg"></a></i></button>
+				</form>			
+			</div>		
+		</div>		
+	</header>	
+
+     
+      <div ng-view></div>
+      
+      <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+      <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
+      <script src="app/app.js"></script>
+      <script src="app/controllers/HomeController.js"></script>
+      <script src="app/routes/routes.js"></script>
+
+      <footer class="rodape">
+		<div class="social-icons">
+			<a href="#"><i class="fa fa-facebook"></i></a>
+			<a href="#"><i class="fa fa-google"></i></a>
+			<a href="#"><i class="fa fa-instagram"></i></a>
+			<a href="#"><i class="fa fa-envelope"></i></a>
+		</div>
+		<p class="copyright">
+			Estoqueando © 2018 Todos os direitos reservados
+		</p>
+		<h4><a href="#">Termos de uso</a> • <a href="#">Política de privacidade</a> • <a href="#">Ajuda</a></h4>
+    </footer>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ 
+	<script>
+		$(".btn-menu").click(function(){
+			$(".menu").show();
+		});
+
+		$(".btn-close").click(function(){
+			$(".menu").hide();
+		});
+	</script>
+   </body>
+</html>
