@@ -7,9 +7,8 @@
 </div>
 -->
 <section>
-    <form name="registerForm" novalidate>
+    <form ng-if="!loading && !success" name="registerForm" novalidate>
         <h1><b>Realize</b> seu cadastro</h1>
-        
         <label for="name">Nome:</label><br>
         <input type="text" id="name" placeholder="" required="required" name="name" ng-model="consultantData.name" />					
         
@@ -29,5 +28,12 @@
         <input type="submit" ng-click="addConsultant()" value="SALVAR" />
         
     </form>
+    <div ng-if="loading" style="text-align: center">
+        <img src="app/web/img/loading.gif" alt="Carregando">	
+    </div>
+    <div ng-if="!loading && success">
+        <h1><b>Cadastro realizado com sucesso!</h1>
+    </div>
+  
 
 </section>
