@@ -7,7 +7,7 @@ app.controller('HomeController', function($rootScope, $scope, $location, $http)
        console.log('entra aqui')
 
        
-    $http.post( $rootScope.uri+ '/consultant/add', $scope.consultantData, 
+    $http.post( $rootScope.uri+ '/consultant/add', {'consultantData': $scope.consultantData }, 
     {
         headers: {'Content-Type': 'application/json'} 
     })
