@@ -1,6 +1,6 @@
 app.controller('HomeController', function($rootScope, $scope, $location, $http)
 {
-  $rootScope.uri = "apiestoqueando.herokuapp.com";
+  $rootScope.uri = "https://apiestoqueando.herokuapp.com";
   $scope.consultantData = {};
   
    $scope.addConsultant = function() {
