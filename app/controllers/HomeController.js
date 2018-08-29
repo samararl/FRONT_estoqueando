@@ -4,8 +4,6 @@ app.controller('HomeController', function($rootScope, $scope, $location, $http)
   $scope.consultantData = {};
   
    $scope.addConsultant = function() {
-       console.log('entra aqui')
-
        
     $http.post( $rootScope.uri+ '/consultant/add', {'consultantData': $scope.consultantData }, 
     {

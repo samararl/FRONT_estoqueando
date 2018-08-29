@@ -1,10 +1,9 @@
 <!doctype html>
-<html ng-app="app">
+<html lang="pt-br" ng-app="app">
 
    <head>
 
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta http-equiv="content-language" content="pt-br" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Estoqueando</title>
         <meta name="description" content="Aplicação para compra de produtos de catálogos">
@@ -21,7 +20,7 @@
 
    <body>
     <header>	
-		<a href="index.html"><img class="logo" src="app/source/img/logo.png"></a>
+		<a href="index.html"><img class="logo" src="app/source/img/logo.png" alt="Logo Estoqueando"></a>
 		<button class="btn-menu"><i class="fa fa-bars fa-lg"></i></button>
 
 			<nav class="menu">
@@ -38,9 +37,9 @@
 
 			<div class="menu-pesq">
 			<div id="divBusca">
-				<form action="" method="submit">
+				<form name="searchForm" novalidate>
 					<input type="search" id="txtBusca" placeholder="Pesquisar"/>
-					<button class="btn-search"><a href="#"><i class="fa fa-search  fa-lg"></a></i></button>
+					<button class="btn-search"><a href="#"><i class="fa fa-search  fa-lg"></i></a></button>
 				</form>			
 			</div>		
 		</div>
@@ -114,7 +113,9 @@
 	   
 	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-validate/1.2.3/validate.min.js"></script>
 
+	
 	<script src="app/app.js"></script>
 	<script src="app/controllers/HomeController.js"></script>
 	<script src="app/routes/routes.js"></script>
