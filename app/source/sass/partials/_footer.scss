@@ -1,0 +1,45 @@
+footer {
+    width: 100%;
+    float: left;
+    padding: 3% 4%;
+    text-align: center;
+    background: linear-gradient(180deg, $darkPurple, $purple);
+  
+  .social-icons{
+    a {
+    font-size: 1.5em;
+    color: rgba(255, 255, 255, 0.7);
+    margin-right: 3%;
+      &:last-child {
+        margin-right: 0;
+      }
+      &:hover {
+        color: $yellow;
+       
+      }
+    }
+  }
+  
+  .copyright {
+    margin-top: 2%;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1em;
+    a {
+      color: rgba(255, 255, 255, 0.7);
+      margin-right: 3%;
+      &:hover {
+        color: $yellow;
+      }
+    }
+  }
+  
+  h4 {
+    a {
+      margin-top: 3%;
+      color: $white;
+      font-size: 1em;
+    }
+   
+  }
+  
+  }

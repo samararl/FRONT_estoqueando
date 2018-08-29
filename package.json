@@ -20,9 +20,12 @@
     "gulp": "^3.9.1",
     "gulp-clean": "^0.4.0",
     "gulp-sass": "^4.0.1",
-    "jest": "^23.5.0"
+    "gulp-watch": "^5.0.1",
+    "jest": "^23.5.0",
+    "node-sass": "^4.9.3"
   },
   "dependencies": {
+    "angular-i18n": "^1.7.3",
     "angular-translate": "^2.18.1"
   }
 }

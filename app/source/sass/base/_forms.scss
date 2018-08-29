@@ -1,0 +1,95 @@
+
+section{
+    background-color: $whitet;
+    padding: 20% 0;
+  
+  
+  form {    
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    background-color: $white;
+    border-radius:10px;
+    margin: auto;  
+    padding: 2% 5%;
+    max-width: 40%;
+    height: auto;
+    background-position: center center;
+    -webkit-box-shadow: 6px 6px 10px $grey; 
+      -moz-box-shadow: 6px 6px 10px $grey;
+      box-shadow: 6px 6px 10px $grey;	
+  
+    label {   
+      margin-top:5px;   
+      color: $darkPurple;
+      font-weight: bold;
+      text-align: left;
+    }
+  
+  h1 {
+    margin-bottom: 40px;
+    color: $titlePurple;
+    font-size: 2em;
+    text-align: center;
+  
+    b{
+      font-weight: bold;
+    }
+  }
+  
+  
+  input, textarea {
+    position: relative;
+    margin-top: 5px;
+    margin-bottom: 10px;    
+    border: solid 1px $pink;    
+    height: 40px;
+    border-radius: 5px;
+    width: 100%;
+    color: $darkBlue;
+    padding: 3%;
+    font-weight: 500;
+    ::-webkit-input-placeholder {
+      color: rgba(200, 189, 230, 0.3);
+    }
+  }
+  
+  input[type="submit"] {
+    
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 0 15px;
+    height: 48px;
+    width: 40%;
+    vertical-align: middle;
+    border-radius: 3px 3px 4px 4px;
+    background: #C24579;
+    border: 1px solid #d2387c;
+    border-bottom-width: 5px;
+    outline: 0;
+    color: #ffffff;
+    line-height: 45px;
+    font-size: 16px;
+    letter-spacing: 0.01em;
+    font-weight: 600;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+    -webkit-appearance: none;
+    box-shadow: none;
+    transition: background 0.3s ease 0s, border-color 0.3s ease 0s, color 0.3s ease 0s, opacity 0.3s ease 0s;
+    left: 50%;
+    margin-left: -20%;
+  
+   
+  
+  
+  
+  }
+  
+  
+  }
+  
+  
+  
+  
+  
+  }
