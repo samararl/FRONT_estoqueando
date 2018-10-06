@@ -1,39 +1,6 @@
-<!--
-<div class="banner">
-    <div class="title">
-        <h2>Encontre o produto que você procura</h2>
-        <h3>em nosso site</h3>
+
+<div class="homePage">
+    <div class="grid-12">
+        <h1>Home Page</h1>
     </div>
 </div>
--->
-<section>
-    <form ng-if="!loading && !success" name="registerForm" novalidate>
-        <h1><b>Realize</b> seu cadastro</h1>
-        <label for="name">Nome:</label><br>
-        <input type="text" id="name" placeholder="" required="required" name="name" ng-model="consultantData.name" />					
-        
-        <label for="cpf">CPF:</label><br>
-        <input type="text" id="cpf" placeholder="" required="required" name="cpf" ng-model="consultantData.cpf" />            
-            
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" placeholder="" required="required" name="email" ng-model="consultantData.email" />
-        
-        
-        <label for="password">Senha:</label><br>
-        <input type="password" id="password" placeholder="" required="required" name="password" ng-model="consultantData.password"/>
-        
-        <label for="confirmPassword">Confirmar senha:</label><br>
-        <input type="password" id="confirmPassword" placeholder="" required="required" name="confirmPassword" />          
-        
-        <input type="submit" ng-click="addConsultant()" value="SALVAR" />
-        
-    </form>
-    <div ng-if="loading" style="text-align: center">
-        <img src="app/web/img/loading.gif" alt="Carregando">	
-    </div>
-    <div ng-if="!loading && success">
-        <h1><b>Cadastro realizado com sucesso!</h1>
-    </div>
-  
-
-</section>

@@ -1,0 +1,26 @@
+.menuLateral{
+    background-color: #f6f6f6;
+    position: absolute;
+    width: 20%;
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
+    ul{
+        border-radius: 5px;
+
+        li{
+            border-bottom: 1px solid $white;
+            a{
+                padding: 10px;
+                display: block;
+                color: $blackBlue;
+                font-weight: 400;
+                text-transform: uppercase;
+                &:hover, &.active{
+                    color: $white;
+                    background-color: $blackBlue;   
+                }
+            }
+        }
+    }
+}

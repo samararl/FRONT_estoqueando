@@ -9,10 +9,9 @@
         <meta name="description" content="Aplicação para compra de produtos de catálogos">
         <meta name="keywords" content="App, venda direta, comprar, Tupperware, Avon, Mary Kay, Hinode">
         <meta name="robots" content="index, follow">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans" >
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans" >
+        <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
 		<link rel="shortcut icon" href="app/source/img/favicon.ico">  
         <link rel="stylesheet" href="app/web/css/main.css" />
 
@@ -20,105 +19,61 @@
 
    <body>
     <header>	
-		<a href="index.html"><img class="logo" src="app/source/img/logo.png" alt="Logo Estoqueando"></a>
-		<button class="btn-menu"><i class="fa fa-bars fa-lg"></i></button>
 
-			<nav class="menu">
-				<a class="btn-close">x</a>
-				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="#">Utensílios</a></li>
-					<li><a href="#">Cosméticos</a></li>
-					<li><a href="#">Perfumaria</a></li>
-					<li><a href="#">Maquiagem</a></li>
-					<li><a href="#">Moda</a></li>				
-				</ul>				
-			</nav>		
-
-			<div class="menu-pesq">
-			<div id="divBusca">
-				<form name="searchForm" novalidate>
-					<input type="search" id="txtBusca" placeholder="Pesquisar"/>
-					<button class="btn-search"><a href="#"><i class="fa fa-search  fa-lg"></i></a></button>
-				</form>			
-			</div>		
-		</div>
-		
-	</header>	
-
-	 
-	<!--			
-
-<section>
-        <form  action="" method="submit">
-                <h1><b>Realize</b> seu cadastro</h1>
-         
-                <label for="name">Nome:</label><br>
-				<input type="text" id="name" placeholder="" required="required" name="name" />					
-                
-                <label for="cpf">CPF:</label><br>
-                <input type="text" id="cpf" placeholder="" required="required" name="cpf" />            
-                    
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" placeholder="" required="required" name="email" />
+		<div class="row">
+			<div class="grid-3">
+				<a href="index.html"><img class="logo" src="app/source/img/logo.png" alt="Logo Estoqueando"></a>
+			</div>
+			<div class="grid-9">
+				<div class="grid-1"></div>
+				<div class="grid-11">
+						<nav class="menu">
+								<a class="btn-close">x</a>
+								<ul>
+									<li><a ui-sref="app.public.register">Home</a></li>
+									<li><a ui-sref="#">Utensílios</a></li>
+									<li><a ui-sref="#">Cosméticos</a></li>
+									<li><a ui-sref="#">Perfumaria</a></li>
+									<li><a ui-sref="#">Maquiagem</a></li>
+									<li><a ui-sref="#">Moda</a></li>				
+								</ul>				
+						</nav>
+						<a class="menu-login link" ng-if="$root.user == null " ui-sref="app.public.login"> <i class="fa fa-user-circle-o fa-lg" aria-hidden="true"></i> Entrar</a>	
+						<a class="menu-login link" ng-if="$root.user != null" href="" ng-click="logout()"> Logout</a>	
+				</div>			
+			</div>
+		</div>	
+    </header>
+	<div ui-view></div>	 
+	<footer>
+		<div class="container">
+			<div class="grid-4"></div>
+			<div class="grid-4">
+				<div class="social-icons">
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-google"></i></a>
+					<a href="#"><i class="fa fa-instagram"></i></a>
+					<a href="#"><i class="fa fa-envelope"></i></a>	
+				</div>
+				<div class="copyright">
+					<h4>Estoqueando © 2018 Todos os direitos reservados<br>
+						<a href="#">Termos de uso</a>    <a href="#">Política de privacidade</a>    <a href="#">Ajuda</a>
+					</h4>
+				</div> 	
 				
-				
-				<label for="password">Senha:</label><br>
-				<input type="password" id="password" placeholder="" required="required" name="password" />
-				
-				<label for="confirmPassword">Confirmar senha:</label><br>
-                <input type="password" id="confirmPassword" placeholder="" required="required" name="confirmPassword" />          
-                
-                <input type="submit" onclick="Enviar();" value="SALVAR" />
-				
-			</form>
-			
-			<br><br>
-
-	<form  action="" method="submit">
-					<h1><b>Faça</b> seu Login</h1>		 
-					     
-						
-					<label for="email">Email:</label><br>
-					<input type="email" id="emailid" placeholder="" required="required" name="email" />
-					
-					
-					<label for="senha">Senha:</label><br>
-					<input type="password" id="senhaid" placeholder="" required="required" name="senha" />         
-					
-					<input type="submit" onclick="Enviar();" value="ENTRAR" />
-					
-				</form>
-		
-</section>
-	-->
-
-	  <div ng-view></div>
-
-
-	  
-
-	  <footer>
-		<div class="social-icons">
-			<a href="#"><i class="fa fa-facebook"></i></a>
-			<a href="#"><i class="fa fa-google"></i></a>
-			<a href="#"><i class="fa fa-instagram"></i></a>
-			<a href="#"><i class="fa fa-envelope"></i></a>
-		</div>
-		<h4 class="copyright">
-			Estoqueando © 2018 Todos os direitos reservados
-		</h4>
-		<h4 class="copyright"><a href="#">Termos de uso</a><a href="#">Política de privacidade</a><a href="#">Ajuda</a></h4>
+			</div>
+			<div class="grid-4"></div>
+		</div>		
 	</footer>
 	   
-	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
-	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-validate/1.2.3/validate.min.js"></script>
+	<!-- CDN'S -->
+	<script src="//code.angularjs.org/1.5.6/angular.js"></script>	 
+	<script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.20/angular-ui-router.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.20/stateEvents.min.js"></script>	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.11/ngStorage.min.js"></script>
 
-	
-	<script src="app/app.js"></script>
-	<script src="app/controllers/HomeController.js"></script>
-	<script src="app/routes/routes.js"></script>
-      
+	<!-- ARQUIVOS DO SISTEMA -->
+	<script src="app/app.min.js"></script>
+     
    </body>
 </html>

@@ -1,17 +1,45 @@
 .btn{
+    border-radius: 5px;
+    font-size: 1.2em;
     padding: 10px;
-    font-size: 15px;
-    border: none;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    text-align: center;
+    box-shadow: none;
+    text-transform: uppercase;
+
 
     &.btn{     
-        &-save{
+        &-primary{
             color: $white;
-            background-color: $pink;
-            border-radius: 2%;
+            background-color: $blue;
+            //colocar sombra p dentro e efeito hover
         }
-        &-cancel{
-    
+        &-secondary{
+            border: 1px solid #429FE6;        
+            color: #429FE6;    
+            background-color: transparent;         
         }
+        &-block{
+            display: block;
+            width: 100%;
+        }&-login{
+            position: absolute;
+            right: 30px;
+            font-size: 1.6em;
+
+            :active{
+                color:$yellow;
+            }
+          }
+        
+        
     }
     
+    //criar btn link
+
+    
+      
 }
+
+

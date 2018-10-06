@@ -1,286 +1,53 @@
-* {
-    margin: 0;
-    padding: 0;
-    font-size: 100%;
-    border: none;
-    outline: none;
-    font-weight: 300;
-    box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
-  }
-  
-  body {
-    background-color: #ffffff;
-  }
-  
-  a {
-    text-decoration: none;
-  }
-  
-  ul {
-    style: none;
-  }
-  
-  img {
-    max-width: 100%;
-  }
-  
-  /*cabeçalho*/
-  
-  .cabecalho {
-    width: 100%;
-    float: left;
-    padding: 3% 4%;
-    background: linear-gradient(180deg, #aa2ff1, #8562fa);
-    text-align: center;
-  }
-  
-  .logo {
-    width: 100px;
-    height: 100px;
-    float: left;
-    font-size: 0;
-    background: url(../img/logo.png) center center no-repeat;
-
-    @media screen and (min-width: 320px) {
-      background: url(../img/logo-mobile.png) center center no-repeat;
-    }
-    
-  }
-  
-  /*menu*/
-  
-  .btn-menu {
-    width: 60px;
-    height: 56px;
-    float: right;
-    color: #fff;
-    border-radius: 56px;
-    margin-right: 5%;
-    margin-top: 5%;
-    background: linear-gradient(to right, #7538bd, #9768cc);
-  }
-  
-  .menu {
-    display: none;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    background-color: rgba(0, 0, 0, 0.8);
-    top: 0;
-    left: 0;
-  }
-  
-  .btn-close {
-    font-size: 3em;
-    color: #fff;
-    float: right;
-    cursor: pointer;
-    margin-right: 5%;
-  }
-  
-  .menu {
-   
-    ul {
-      width: 100%;
-      float: left;
-      text-align: center;
-      @media screen and (min-width: 320px) {
-        text-align: right;
-      }
-    }
-    li {
-      padding: 1.5%;
-      a {
-        font-size: 2em;
-        color: #fff;
-        padding: 1.5% 3%;
-        &:hover {
-          border-bottom: 1px solid #7538bd;
-        }
-      }
-    }
-  }
-  
   /*banner*/
   
-  .banner {
-    width: 100%;
-    height: 500px;
-    float: left;
-    text-align: center;
-    padding: 3% 4%;
-    background: url(../img/bg.png) center center no-repeat fixed;
-  }
-  
-  .title {
-    h2 {
-      font-size: 2.5em;
-      color: #fff;
-      font-weight: 700;
-    }
-    h3 {
-      font-size: 1.9em;
-      color: #fff;
-      font-size: 1.9em;
-      color: #fff;
-    }
-  }
-  
-  /*footer*/
-  
-  .rodape {
-    width: 100%;
-    float: left;
-    padding: 3% 4%;
-    text-align: center;
-    background: linear-gradient(180deg, #aa2ff1, #8562fa);
-  }
-  
-  .social-icons a {
-    font-size: 1.5em;
-    color: rgba(255, 255, 255, 0.7);
-    margin-right: 3%;
-  }
-  
-  .social-icon a:last-child {
-    margin-right: 0;
-  }
-  
-  .social-icons a:hover {
-    color: #FFEB3B;
-  }
-  
-  .copyright {
-    margin-top: 2%;
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 1em;
-    a {
-      color: rgba(255, 255, 255, 0.7);
-      margin-right: 3%;
-      &:hover {
-        color: #FFEB3B;
-      }
-    }
-  }
-  
-  .rodape h4 {
-    a {
-      margin-top: 3%;
-      color: rgba(255, 255, 255, 0.7);
-      font-size: 1em;
-    }
-    color: rgba(255, 255, 255, 0.7);
-  }
-  
-
-    .btn-menu, .btn-close {
+.banner {
+  width: 100%;
+  height: 500px;
+  float: left;
+  text-align: center;
+  padding: 3% 4%;
+  background: url(../img/bg.png) center center no-repeat fixed;
+}
+   
+.btn-menu, .btn-close {
       display: none;
-    }
-    .cabecalho {
-      .logo {
-        width: 228px;
-        height: 167px;
-        float: left;
-        margin-left: 5%;
-        font-size: 0;
-        background: url(../img/logo.png) no-repeat;
-      }
-      padding: 0;
-      text-align: center;
-    }
-    .menu {
-      width: auto;
-      position: absolute;
-      float: left;
-      background-color: transparent;
-      display: block;
-      font-size: 1.2em;
-      padding-left: 550px;
-      margin-bottom: 30px;
-      margin-top: 0;
-    }
-    ul, menu, dir {
-      display: block;
-      list-style-type: none;
-      margin-top: 90px;
-    }
-    .menu li {
-      padding: 0;
-      float: left;
-      a {
-        color: #fff;
-        font-size: 1em;
-        padding: 15px;
-        &:hover {
-          color: #FFEB3B;
-        }
+}
+.menu {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin-top: 50px;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+  li {
+    padding: 0;
+    float: left;
+    a {
+      color: $white;
+      font-size: 1em;
+      padding: 15px;
+      &:hover {          
+        color: $yellow;
+        border-bottom: 2px solid $purple;
+        -webkit-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+        
       }
     }
-    .btn-login {
-      color: #30314A;
-      width: 40px;
-      height: 40px;
-    }
-    .login {
-      float: right;
-      right: 30px;
-    }
-    .btn-login {
-      h2 {
-        display: inline-block;
-        font-size: 1.5em;
-        font-weight: 400;
-        color: #30314A;
-      }
-      width: 40px;
-      height: 40px;
-      float: right;
-      color: #30314A;
-      margin-right: 5%;
-      margin-top: 5%;
-    }
-    .banner {
-      z-index: -1;
-    }
-    #divBusca {
-      position: relative;
-      margin-top: 30px;
-      margin-bottom: 0;
-      margin-right: 150px;
-      float: right;
-      background-color: #fff;
-      border: solid 3px #7538bd;
-      border-radius: 10px;
-      width: 350px;
-      ::-webkit-input-placeholder {
-        color: rgba(200, 189, 230, 0.3);
-      }
-    }
-    #txtBusca {
-      float: left;
-      background-color: #fff;
-      padding-left: 5px;
-      font-weight: 300;
-      font-size: 18px;
-      height: 35px;
-      width: 260px;
-      border-radius: 10px;
-    }
-    .btn-search {
-      width: 30px;
-      height: 30px;
-      float: right;
-      margin-right: 5px;
-      color: rgba(150, 104, 204, 0.6);
-      background-color: #fff;
-      border: none;
-      a:hover {
-        color: rgba(150, 104, 204, 0.6);
-        background-color: #fff;
-        border: none;
-      }
-    }
-    .rodape {
-      bottom: 0;
-    }
+  }
+}
+.menu-login{
+  font-size: 1.4em;
+  color: $white;
+  margin-left: 50px;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+  a:active{
+    color:$yellow;
+  }
+}
+
+
+
+

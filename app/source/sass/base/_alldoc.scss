@@ -1,16 +1,23 @@
 * {
   margin: 0;
   padding: 0;
-  font-size: 100%;
   border: none;
   outline: none;
-  font-weight: 400;
+  font-weight: 300;
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
+ 
+}
 
 
 body {
   background-color: $whitet;
+}
+section{
+  .light {
+    background-color: $whitet;
+    padding: 20% 0;
+  }
 }
 
 a {
@@ -25,4 +32,98 @@ img {
   max-width: 100%;
 }
 
+h1 {
+  color: $titlePurple;
+  font-size: 2em;
+  text-align: center;
 }
+
+h2 {
+  color: $titlePurple;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.3em;
+}
+
+
+h4 {
+  font-size: 1em;
+}
+
+h5 {
+  font-size: 0.8em;
+}
+
+.text-center{
+  text-align: center;  
+}
+
+.text-left{
+  text-align: left;  
+}
+
+.text-right{
+  text-align: right;  
+}
+
+small{
+  color: $darkRed ;
+  font-weight: 400;
+}
+
+.bold{
+  font-weight: bold;
+}
+.mt-10{
+  margin-top: 10px;
+}
+
+.mb-10{
+  margin-bottom: 10px;
+}
+
+.mt-30{
+  margin-top: 30px;
+}
+
+.mb-30{
+  margin-bottom: 30px;
+}
+
+.no-margin-bottom{
+  margin-bottom: 0px !important;
+}
+.no-margin-top{
+  margin-top: 0px !important;
+}
+.no-margin-left{
+  margin-left: 0px !important;
+}
+.no-margin-right{
+  margin-right: 0px !important;
+}
+.no-padding-bottom{
+  padding-bottom: 0px !important;
+}
+.no-padding-top{
+  padding-top: 0px !important;
+}
+.no-padding-left{
+  padding-left: 0px !important;
+}
+.no-padding-right{
+  padding-right: 0px !important;
+}
+.pos-r{
+  right: 0;
+}
+
+.content {
+  margin: 0 auto;
+}
+
+
+

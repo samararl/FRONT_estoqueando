@@ -1,0 +1,32 @@
+<div class="loginPage">
+    <div class="container">
+        <div class="row"> 
+          <div class="grid-4"> </div>
+          <div class="grid-4 mt-10">
+                <form ng-if="!loading && !success"  name="loginForm" novalidate>
+                        <h1 class="mt-30 mb-30"><strong>Faça</strong> seu Login</h1>	            
+                            
+                        <label for="email">Email:</label>
+                        <input type="email" id="emailid" placeholder="" required="required" name="email" ng-model="accessData.email"/>
+                        <small ng-if="loginForm.email.$error.email && loginForm.email.$touched">Email inválido</small><br>                     
+                        <small ng-if="loginForm.email.$error.required && loginForm.email.$touched">Insira o E-mail</small>
+                        
+                        <label for="senha">Senha:</label>
+                        <input type="password" id="senhaid" placeholder="" required="required" name="senha"  ng-model="accessData.password" />         
+                        <small ng-if="loginForm.senha.$error.required && loginForm.senha.$touched">Insira a senha</small>
+
+                       
+                        <button class="btn btn-block mt-10 mb-10" ng-class="{'btn-primary': loginForm.$valid, 'btn-secondary': loginForm.$invalid}" ng-disabled="loginForm.$invalid" ng-click="login()">Entrar</button>
+                        
+                        <h4 class="text-center mt-30 mb-10">Ainda não tem uma conta? <a href="register">Cadastre-se aqui</a></h4>
+
+                    </form>
+
+          </div>
+          <div class="grid-4"></div>
+        </div>
+      </div>
+      <div ng-if="loading" style="text-align: center">
+        <img src="app/web/img/loading.gif" alt="Carregando">	
+    </div>
+</div>

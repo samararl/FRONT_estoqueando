@@ -19,13 +19,23 @@
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-livereload": "^4.0.0",
     "gulp-sass": "^4.0.1",
+    "gulp-uglify": "^3.0.1",
     "gulp-watch": "^5.0.1",
     "jest": "^23.5.0",
     "node-sass": "^4.9.3"
   },
   "dependencies": {
+    "angular": "^1.4.9",
     "angular-i18n": "^1.7.3",
-    "angular-translate": "^2.18.1"
+    "angular-resource": "^1.5.0",
+    "angular-route": "^1.5.6",
+    "angular-translate": "^2.18.1",
+    "angular-ui-mask": "^1.8.7",
+    "angular-ui-router": "^0.2.18",
+    "angular-ui-validate": "^1.2.3",
+    "ui-router": "^1.0.0-alpha.3"
   }
 }
