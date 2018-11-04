@@ -1,41 +1,9 @@
 .welcomePage {
     background-color: $white;
+
     section {
         margin-top: 40px;
         margin-bottom: 40px;
     }
-    .productCard {
-        background-color: $white;
-        border-radius: 2px;
-        margin: 10px;        
-        .imageProduct {
-            box-sizing: border-box;
-            width: 100%;
-            float: left;
-            min-height: 150px;
-            a{
-                display: block;
-                img{
-                    max-width: 100%;
-                }
-            }
-        }
-        .dataProduct {
-            box-sizing: border-box;
-            text-align: center;
-            p{
-                &.blue{
-                    color: $blackBlue;
-                    font-weight: 400;
-                }
-                &.pink{
-                    color:$darkPink;
-                    font-weight: bold;
-                    font-size: 20px;
-                    padding: 5px;
-                }
-            }        
-          
-        }
-    }
+
 }

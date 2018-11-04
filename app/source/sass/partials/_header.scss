@@ -1,16 +1,16 @@
-header{
+header {
+    height: 125px;
     width: 100%;
-	background: linear-gradient(180deg, $purple, $blue); 	
 
-    .logo{
-        width:228px; 
-        height:167px;         
-        @media screen and (max-width: 768px) {
-            width:100px; 
-            height: 100px;          
-            background: url(../img/logo-mobile.png) center center no-repeat;  
-        }
+    background-color: $blackBlue;
+
+    .logo {
+        width: 228px;
+        height: 167px;
+
+        @media screen and (max-width: 768px) {}
+
     }
 
-   
+
 }

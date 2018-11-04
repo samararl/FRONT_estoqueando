@@ -1,53 +1,94 @@
   /*banner*/
-  
-.banner {
-  width: 100%;
-  height: 500px;
-  float: left;
-  text-align: center;
-  padding: 3% 4%;
-  background: url(../img/bg.png) center center no-repeat fixed;
-}
-   
-.btn-menu, .btn-close {
-      display: none;
-}
-.menu {
-  font-size: 1.2em;
-  font-weight: 600;
-  margin-top: 50px;
-  @media screen and (max-width: 768px) {
+  .mobile-menu {
     display: none;
   }
-  li {
-    padding: 0;
+
+  .banner {
+    width: 100%;
+    height: 500px;
     float: left;
-    a {
-      color: $white;
-      font-size: 1em;
-      padding: 15px;
-      &:hover {          
-        color: $yellow;
-        border-bottom: 2px solid $purple;
-        -webkit-transition: all .3s ease-in-out;
-        transition: all .3s ease-in-out;
-        
+    text-align: center;
+    padding: 3% 4%;
+    background: url(../img/bg.png) center center no-repeat fixed;
+  }
+
+  .btn-menu,
+  .btn-close {
+    display: none;
+  }
+
+  .menu {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-top: 50px;
+
+
+    li {
+      padding: 0;
+      float: left;
+
+      a {
+        color: $white;
+        font-size: 1em;
+        padding: 15px;
+
+        &:hover {
+          color: $lightBlue;
+          border-bottom: 2px solid $purple;
+          -webkit-transition: all .3s ease-in-out;
+          transition: all .3s ease-in-out;
+
+        }
       }
     }
   }
-}
-.menu-login{
-  font-size: 1.4em;
-  color: $white;
-  margin-left: 50px;
-  @media screen and (max-width: 768px) {
-    display: none;
+
+  .menu-login {
+    font-size: 1.4em;
+    color: $white;
+    margin-left: 50px;
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+
+    a:active {
+      color: $darkPink;
+    }
   }
-  a:active{
-    color:$yellow;
+
+
+  @media screen and (max-width: 800px) {
+    .logo {
+      width: 50%;
+    }
+
+    .mobile-menu {
+      position: absolute;
+      display: block;
+      right: 20px;
+      top: 20px;
+      color: $white;
+      //background: $pink;
+      //border-radius: 100%;
+      padding: 20px;
+    }
+
+    .m-menu {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: $white;
+      text-align: center;
+      line-height: 1.5em;
+      font-size: 1.2em;
+
+
+    }
+
+    .btn-menu,
+    .btn-close {
+      display: block;
+    }
+
   }
-}
-
-
-
-

@@ -1,4 +1,4 @@
-.btn{
+.btn {
     border-radius: 5px;
     font-size: 1.2em;
     padding: 10px;
@@ -7,39 +7,44 @@
     text-align: center;
     box-shadow: none;
     text-transform: uppercase;
+    cursor: pointer;
 
-
-    &.btn{     
-        &-primary{
+    &.btn {
+        &-primary {
             color: $white;
             background-color: $blue;
-            //colocar sombra p dentro e efeito hover
+
+            &.black-blue {
+                background-color: $blackBlue;
+            }
         }
-        &-secondary{
-            border: 1px solid #429FE6;        
-            color: #429FE6;    
-            background-color: transparent;         
+
+        &-secondary {
+            border: 1px solid #429FE6;
+            color: #429FE6;
+            background-color: transparent;
         }
-        &-block{
+
+        &-block {
             display: block;
             width: 100%;
-        }&-login{
+        }
+
+        &-login {
             position: absolute;
             right: 30px;
             font-size: 1.6em;
 
-            :active{
-                color:$yellow;
+            :active {
+                color: $yellow;
             }
-          }
-        
-        
+        }
+
+
     }
-    
+
     //criar btn link
 
-    
-      
+
+
 }
-
-

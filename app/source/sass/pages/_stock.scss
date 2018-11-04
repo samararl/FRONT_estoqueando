@@ -1,0 +1,22 @@
+.stockPage {
+
+    fieldset {
+        padding: 10px;
+        background-color: white;
+        margin-top: 20px;
+    }
+
+    .productCard {
+        min-height: 330px;
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+
+        input {
+            height: 30px;
+            font-size: 1.1em;
+            padding: 3px;
+            border-color: $blackBlue;
+            color: $blackBlue;
+        }
+    }
+}

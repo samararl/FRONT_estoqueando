@@ -1,80 +1,84 @@
-  form {    
+  form {
     font-size: 1em;
-    /*background-color: $white;*/
-    border-radius:10px;
-    margin: auto;  
+    border-radius: 10px;
+    margin: auto;
     height: auto;
     background-position: center center;
-  /*  -webkit-box-shadow: 6px 6px 10px $grey; 
-    -moz-box-shadow: 6px 6px 10px $grey;
-    box-shadow: 6px 6px 10px $grey;	*/
-  
-    label {   
-      margin-top:5px;   
+    display: block;
+
+    .dinline {
+      display: inline;
+    }
+
+    .halfForm {
+      width: 50%;
+    }
+
+
+    label {
+      margin-top: 5px;
       color: $blue;
-      display:block;
+      display: block;
       font-weight: bold;
       text-align: left;
     }
-   
-  
-  input, textarea {
-    position: relative;
-    font-size: 1.3em;
-    margin-top: 10px;
-    margin-bottom: 10px;    
-    border: solid 1px $blue;    
-    height: 40px;
-    border-radius: 5px;
-    width: 100%;
-    color: $darkBlue;
-    padding: 3%;
-    font-weight: 500;
-    ::-webkit-input-placeholder {
-      color: rgba(200, 189, 230, 0.3);
-    }
-    &.ng-touched{
-      &.ng-invalid {
-        border-color: $darkRed;
+
+
+    input,
+    textarea {
+      position: relative;
+      font-size: 1.3em;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      border: solid 1px $blue;
+      height: 40px;
+      border-radius: 5px;
+      width: 100%;
+      color: $darkBlue;
+      padding: 3%;
+      font-weight: 500;
+
+      ::-webkit-input-placeholder {
+        color: rgba(200, 189, 230, 0.3);
       }
+
+
+      &.ng-touched {
+        &.ng-invalid {
+          border-color: $darkRed;
+        }
+      }
+
     }
-  
-  }
- 
-  
-  
-
-/* css do campo pesquisa*/
 
 
 
-  .btn-search {
-  
-    position: absolute;  
-  
 
-line-height: 30px;
-  vertical-align: middle;
-  //float: right;
-  margin-right: 10px;   
-  
-  color:$white;
+    /* css do campo pesquisa*/
 
 
-  a{    
-    background: none;
-      color: rgba(150, 104, 204, 0.6);    
+
+    .btn-search {
+
+      position: absolute;
+
+
+      line-height: 30px;
+      vertical-align: middle;
+      //float: right;
+      margin-right: 10px;
+
+      color: $white;
+
+
+      a {
+        background: none;
+        color: rgba(150, 104, 204, 0.6);
+
         &a:hover {
-          color:$purple;      
+          color: $purple;
           border: none;
         }
+      }
     }
   }
-
-
-
-}
-
-
-
-  

@@ -16,6 +16,7 @@
       config.headers['X-Content-Type-Options'] = 'nosniff';
       config.headers['Strict-Transport-Security'] = 'max-age=63072000; includeSubdomains; preload';
 
+
       if (TokenHandler.get()) {
         config.headers['Authorization'] = 'Bearer ' + TokenHandler.get();
       }

@@ -1,3 +1,5 @@
+$breakpoint-small: "screen and (max-width: 450px)";
+
 * {
   margin: 0;
   padding: 0;
@@ -6,22 +8,93 @@
   font-weight: 300;
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
- 
+
 }
 
+b {
+  font-weight: 600;
+}
 
 body {
   background-color: $whitet;
-}
-section{
-  .light {
+
+  .content {
+    position: absolute;
+    top: 192px;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: 100%;
     background-color: $whitet;
-    padding: 20% 0;
+    left: 300px;
+
+    @media #{$breakpoint-small} {
+      left: 0px;
+    }
+
+    &.public {
+      left: 0px;
+    }
+
+    section {
+      .light {
+        background-color: $whitet;
+        padding: 20% 0;
+      }
+
+      .productCard {
+        background-color: $white;
+        border-radius: 2px;
+        margin: 10px;
+
+        .imageProduct {
+          box-sizing: border-box;
+          width: 100%;
+          float: left;
+          min-height: 150px;
+
+          a {
+            display: block;
+
+            img {
+              max-width: 100%;
+            }
+          }
+        }
+
+        .dataProduct {
+          box-sizing: border-box;
+          text-align: center;
+
+          p {
+            padding: 5px;
+
+            &.blue {
+              color: $blackBlue;
+              font-weight: 400;
+            }
+
+            &.pink {
+              color: $darkPink;
+              font-weight: bold;
+              font-size: 20px;
+            }
+          }
+
+        }
+      }
+    }
   }
 }
 
+
 a {
   text-decoration: none;
+  color: $purple;
+}
+
+.divider {
+  border-bottom: solid 1px $blackBlue;
 }
 
 ul {
@@ -42,6 +115,8 @@ h2 {
   color: $titlePurple;
   font-size: 1.5em;
   text-align: center;
+
+
 }
 
 h3 {
@@ -57,73 +132,95 @@ h5 {
   font-size: 0.8em;
 }
 
-.text-center{
-  text-align: center;  
+.text-center {
+  text-align: center;
 }
 
-.text-left{
-  text-align: left;  
+.text-left {
+  text-align: left;
 }
 
-.text-right{
-  text-align: right;  
+.text-right {
+  text-align: right;
 }
 
-small{
-  color: $darkRed ;
+small {
+  color: $darkRed;
   font-weight: 400;
 }
 
-.bold{
+.bold {
   font-weight: bold;
 }
-.mt-10{
+
+.mt-10 {
   margin-top: 10px;
 }
 
-.mb-10{
+.mb-10 {
   margin-bottom: 10px;
 }
 
-.mt-30{
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mt-30 {
   margin-top: 30px;
 }
 
-.mb-30{
+.mb-30 {
   margin-bottom: 30px;
 }
 
-.no-margin-bottom{
+.mt-40 {
+  margin-top: 40px;
+}
+
+.mb-40 {
+  margin-bottom: 40px;
+}
+
+.no-margin-bottom {
   margin-bottom: 0px !important;
 }
-.no-margin-top{
+
+.no-margin-top {
   margin-top: 0px !important;
 }
-.no-margin-left{
+
+.no-margin-left {
   margin-left: 0px !important;
 }
-.no-margin-right{
+
+.no-margin-right {
   margin-right: 0px !important;
 }
-.no-padding-bottom{
+
+.no-padding-bottom {
   padding-bottom: 0px !important;
 }
-.no-padding-top{
+
+.no-padding-top {
   padding-top: 0px !important;
 }
-.no-padding-left{
+
+.no-padding-left {
   padding-left: 0px !important;
 }
-.no-padding-right{
+
+.no-padding-right {
   padding-right: 0px !important;
 }
-.pos-r{
+
+.pos-r {
   right: 0;
 }
 
 .content {
   margin: 0 auto;
 }
-
-
-

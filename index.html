@@ -1,51 +1,101 @@
 <!doctype html>
 <html lang="pt-br" ng-app="app">
 
-   <head>
+<head>
 
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Estoqueando</title>
-        <meta name="description" content="Aplicação para compra de produtos de catálogos">
-        <meta name="keywords" content="App, venda direta, comprar, Tupperware, Avon, Mary Kay, Hinode">
-        <meta name="robots" content="index, follow">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans" >
-        <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
-		<link rel="shortcut icon" href="app/source/img/favicon.ico">  
-        <link rel="stylesheet" href="app/web/css/main.css" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Estoqueando</title>
+	<meta name="description" content="Aplicação para compra de produtos de catálogos">
+	<meta name="keywords" content="App, venda direta, comprar, Tupperware, Avon, Mary Kay, Hinode">
+	<meta name="robots" content="index, follow">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans">
+	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+	 crossorigin="anonymous">
+	<link rel="shortcut icon" href="app/source/img/favicon.ico">
+	<link rel="stylesheet" href="app/web/css/main.css" />
+	<!-- Hotjar Tracking Code for http://estoqueando.com.br -->
+	<script>
+		(function (h, o, t, j, a, r) {
+			h.hj = h.hj || function () {
+				(h.hj.q = h.hj.q || []).push(arguments)
+			};
+			h._hjSettings = {
+				hjid: 1042707,
+				hjsv: 6
+			};
+			a = o.getElementsByTagName('head')[0];
+			r = o.createElement('script');
+			r.async = 1;
+			r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+			a.appendChild(r);
+		})(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+	</script>
+</head>
 
-   </head>
-
-   <body>
-    <header>	
+<body>
+	<header>
 
 		<div class="row">
 			<div class="grid-3">
 				<a href="index.html"><img class="logo" src="app/source/img/logo.png" alt="Logo Estoqueando"></a>
+
 			</div>
+
+			<div>
+
+				<i class="fas fa-bars  fa-lg mobile-menu" ng-click="mnClose =! mnClose" ng-init="mnClose = false"></i>
+
+				<div ng-show="mnClose">
+
+					<h1><a class="btn-close text-center">x</a></h1>
+
+					<nav class="m-menu">
+						<ul>
+							<li><a ui-sref="app.public.register">Home</a></li>
+							<li><a ui-sref="#">Utensílios</a></li>
+							<li><a ui-sref="#">Cosméticos</a></li>
+							<li><a ui-sref="#">Perfumaria</a></li>
+							<li><a ui-sref="#">Maquiagem</a></li>
+							<li><a ui-sref="#">Moda</a></li>
+						</ul>
+					</nav>
+				</div>
+
+
+
+
+
+
+			</div>
+
+
 			<div class="grid-9">
 				<div class="grid-1"></div>
 				<div class="grid-11">
-						<nav class="menu">
-								<a class="btn-close">x</a>
-								<ul>
-									<li><a ui-sref="app.public.register">Home</a></li>
-									<li><a ui-sref="#">Utensílios</a></li>
-									<li><a ui-sref="#">Cosméticos</a></li>
-									<li><a ui-sref="#">Perfumaria</a></li>
-									<li><a ui-sref="#">Maquiagem</a></li>
-									<li><a ui-sref="#">Moda</a></li>				
-								</ul>				
-						</nav>
-						<a class="menu-login link" ng-if="$root.user == null " ui-sref="app.public.login"> <i class="fa fa-user-circle-o fa-lg" aria-hidden="true"></i> Entrar</a>	
-						<a class="menu-login link" ng-if="$root.user != null" href="" ng-click="logout()"> Logout</a>	
-				</div>			
+					<nav class="menu">
+
+						<ul>
+							<li><a ui-sref="app.public.register">Home</a></li>
+							<li><a ui-sref="#">Utensílios</a></li>
+							<li><a ui-sref="#">Cosméticos</a></li>
+							<li><a ui-sref="#">Perfumaria</a></li>
+							<li><a ui-sref="#">Maquiagem</a></li>
+							<li><a ui-sref="#">Moda</a></li>
+						</ul>
+					</nav>
+					<a class="menu-login link" ng-if="$root.user == null " ui-sref="app.public.login">
+						<i class="fas fa-user-circle fa-lg"></i></i> Entrar</a>
+					<b><a class="menu-login link" ng-if="$root.user != null" href="" ng-click="logout()">
+							Logout <i class="fas fa-sign-out-alt"></i></a></b>
+				</div>
 			</div>
-		</div>	
-    </header>
-	<div ui-view></div>	 
-	<footer>
+		</div>
+	</header>
+	<div ui-view></div>
+	<!--<footer>
 		<div class="container">
 			<div class="grid-4"></div>
 			<div class="grid-4">
@@ -64,16 +114,18 @@
 			</div>
 			<div class="grid-4"></div>
 		</div>		
-	</footer>
-	   
+	</footer>-->
+
 	<!-- CDN'S -->
-	<script src="//code.angularjs.org/1.5.6/angular.js"></script>	 
+	<script src="//code.angularjs.org/1.5.6/angular.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.20/angular-ui-router.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.20/stateEvents.min.js"></script>	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.20/stateEvents.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.11/ngStorage.min.js"></script>
+	<script src="node_modules/socket.io-client/dist/socket.io.js"></script>
 
 	<!-- ARQUIVOS DO SISTEMA -->
 	<script src="app/app.min.js"></script>
-     
-   </body>
+
+</body>
+
 </html>

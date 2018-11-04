@@ -1,0 +1,63 @@
+<menu-lateral></menu-lateral>
+
+<div class="content stockPage">
+    <div class="grid-12">
+        <fieldset>
+            <h3>Filtros</h3>
+            <form name="registerForm" novalidate>
+                <div class="grid-6">
+                    <label for="produto">Produto:</label>
+                    <input type="text" id="produto" name="produto" ng-model="filterBar.produto" />
+                </div>
+                <div class="grid-6">
+                    <label for="marca">Marca:</label>
+                    <input type="text" id="marca" name="marca" ng-model="filterBar.marca" />
+                </div>
+            </form>
+        </fieldset>
+    </div>
+    <loading show="loading"></loading>
+    <div ng-show="!loading" class="grid-12">
+        <section>
+            <div class="grid-12 no-padding-right">
+                <div ng-repeat="product in products | filter:{produto:filterBar.produto} | orderBy: 'produto'" class="productCard grid-2">
+                    <i ng-class="{'icon-minus dark-pink' : product.add, 'icon-plus' : !product.add}" ng-click="addProduct(product)"></i>
+                    <div class="imageProduct">
+                        <a href="" ng-click="addProduct(product)">
+                            <img src="https://cdn.awsli.com.br/600x450/0/239/produto/21672937/96f2b6042f.jpg" alt="{{product.produto}}">
+                        </a>
+                        <div class="dataProduct">
+                            <p class="blue">{{product.produto}}</p>
+                        </div>
+                        <div class="grid-12" ng-if="product.add">
+                            <form action="">
+                                <div class="grid-6 no-margin-bottom no-padding-right">
+                                    <input class="no-margin-bottom" type="text" ng-model="product.item.quantity">
+                                </div>
+                                <div class="grid-6 no-margin-bottom no-padding-right">
+                                    <input class="no-margin-bottom" type="text" ng-model="product.item.price">
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+
+                </div>
+        </section>
+        <button class="btn btn-block btn-primary black-blue mt-30" ng-click="saveAddedProducts()">Adicionar produtos ao
+            estoque</button>
+
+    </div>
+
+
+    <modal-dialog show='modalShowResponse' width='60%' height='60%'>
+        <div ng-if="success">
+            <h1 ng-if="success">Inserção de produto no estoque concluída com sucesso!</h1>
+        </div>
+        <div ng-if="!success">
+            <h1>Ocorreu um erro!</h1>
+        </div>
+
+    </modal-dialog>
+
+</div>

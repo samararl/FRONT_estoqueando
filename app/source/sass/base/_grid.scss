@@ -6,6 +6,7 @@ $grid-max: 1004px;
 $breakpoint-small: "screen and (max-width: 450px)";
 
 [class*="grid-"]{
+  position: relative;
   float: left;
   padding: 0 $grid-gutter;
   margin-bottom: 20px;

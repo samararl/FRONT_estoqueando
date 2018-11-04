@@ -1,10 +1,43 @@
+<nav class="menul menuLateral mt-30">
+
+    <i class="fas fa-store ctpurple"></i>
+    <span class="menu__title ctpurple">Estoque</span>
+    <a class="menu__item" ui-sref="app.private.welcome">
+        <span class="menu__item-name">Meu estoque</span>
+    </a>
+    <a class="menu__item" ui-sref="app.private.stock">
+        <span class="menu__item-name">Adicionar ao estoque</span>
+    </a>
+    <a class="menu__item" ui-sref="app.private.vendidos">
+        <span class="menu__item-name">Vendidos</span>
+    </a>
+    <a class="menu__item" ui-sref="app.private.purchase">
+        <span class="menu__item-name">Pedidos</span>
+    </a>
+    <i class="fas fa-comments ctpurple"></i>
+    <span class="menu__title ctpurple">Chat</span>
+    <a class="menu__item" ui-sref="app.private.chat">
+        <span class="menu__item-name ">Meu Chat</span>
+    </a>
+    <i class="fas fa-user-alt ctpurple"></i>
+    <span class="menu__title ctpurple">Dados cadastrais</span>
+    <a class="menu__item" ui-sref="app.private.personal">
+        <span class="menu__item-name">Meus dados</span>
+    </a>
 
 
-<div class="menuLateral">
-    <ul>
-        <li><a href="/estoque">Vitrine</a></li>
-        <li><a href="/estoque">Estoque</a></li>
-        <li><a href="/pedidos">Pedidos</a></li>
-        <li><a href="/vendidos">Vendidos</a></li>
-    </ul>
+</nav>
+
+<div class="topnav">
+    <a href="#home" class="active">Logo</a>
+    <!-- Navigation links (hidden by default) -->
+    <div id="myLinks">
+        <a class="menu__item" ui-sref="app.private.vitrine">Meu estoque</a>
+        <a class="menu__item" ui-sref="app.private.stock">Adicionar ao estoque</a>
+        <a class="menu__item" ui-sref="app.private.vendidos">Vendidos</a>>
+    </div>
+    <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+    </a>
 </div>

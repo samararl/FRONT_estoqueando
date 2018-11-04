@@ -1,0 +1,28 @@
+<menu-lateral></menu-lateral>
+
+<div class="content chatPage">
+
+    <h1>Chat</h1>
+
+    <div id="chat">
+
+        <div class="menuChat">
+            <div class="name">{{nickname}}</div>
+            <div class="last">Entrou: {{time}}</div>
+        </div>
+
+        <ol class="chat">
+            <li ng-repeat="message in messages" ng-class="{'self': message.type== 'self', 'other': message.type == 'other'}">
+                <div class="msg"><span>{{message.nickname}}:</span>
+                    <p>{{message.textMessage}}</p><time>{{message.timeMessage}}</time>
+                </div>
+            </li>
+            <li ng-repeat="msg in updates" class="info">{{msg.message}}</li>
+        </ol>
+        <input class="textarea" type="text" placeholder="Digite aqui!" id="textarea" ng-model="textMessage" />
+        <button class="btn btn-block btn-primary black-blue mt-30" ng-click="submitMessage(textMessage)">Enviar
+            mensagem</button>
+
+    </div>
+
+</div>

@@ -1,4 +1,3 @@
-
 //Bases
 @import "./base/_colors.scss";
 @import "./base/_forms.scss";
@@ -6,13 +5,15 @@
 @import "./base/_alldoc.scss";
 @import "./base/_grid.scss";
 @import "./base/_menu-lateral.scss";
+@import "./base/_modal.scss";
+@import "./base/_icons.scss";
 
 
 //Parciais
 @import "./partials/_header.scss";
 @import "./partials/_footer.scss";
-@import "./partials/_menu.scss";    
-@import "./partials/_banner.scss";  
+@import "./partials/_menu.scss";
+@import "./partials/_banner.scss";
 
 
 
@@ -20,5 +21,5 @@
 //Paginas
 @import "./pages/_welcome";
 @import "./pages/_login";
-
-
+@import "./pages/_stock";
+@import "./pages/_chat";

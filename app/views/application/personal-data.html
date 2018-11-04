@@ -1,0 +1,86 @@
+<menu-lateral></menu-lateral>
+
+<div class="content PersonalData">
+    <div class="container">
+        <div>
+            <div class="grid-12">
+                <form ng-if="!loading && !success" name="registerForm" novalidate>
+                    <div class="grid-6">
+                        <h1 class="mb-30 text-left"><b>Meus dados</b></h1>
+
+
+
+
+                        <label for="name">Nome:</label>
+                        <input type="text" id="name" placeholder="" required="required" name="name" ng-model="personData.name"
+                            ui-validate="{hasSurname:'hasSurname($value)'}" />
+                        <small ng-if="registerForm.name.$dirty && registerForm.name.$error.hasSurname">Insira o
+                            sobrenome</small><br>
+                        <small ng-if="registerForm.name.$error.required && registerForm.name.$touched">Nome obrigatório</small>
+
+                        <label for="cpf">CPF:</label>
+                        <input type="text" id="cpf" name="cpf" ng-model="personData.cpf" ui-mask="999.999.999-99"
+                            required ui-validate="{validateCpf:'cpfValidate($value)'}" />
+                        <small ng-if="registerForm.cpf.$error.validateCpf && registerForm.cpf.$touched">Cpf inválido</small><br>
+
+                        <small ng-if="registerForm.cpf.$error.required && registerForm.cpf.$touched">Cpf obrigatório</small>
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" placeholder="" required="required" name="email" ng-model="personData.email" />
+                        <small ng-if="registerForm.email.$error.email && registerForm.email.$touched">Email inválido</small><br>
+                        <small ng-if="registerForm.email.$error.required && registerForm.email.$touched">E-mail
+                            obrigatório</small>
+
+
+                        <label for="password">Senha:</label>
+                        <input type="password" class="dinline" id="password" placeholder="" required="required" name="password"
+                            ng-minlength="5" ng-maxlength="15" ng-model="personData.password" />
+
+                        <small ng-if="registerForm.password.$error.required && registerForm.password.$touched">Senha
+                            obrigatória</small>
+                        <small ng-if="registerForm.password.$error.minlength">Insira no mínimo 6 caracteres</small>
+                        <small ng-if="registerForm.password.$error.maxlength">Insira no máximo 15 caracteres</small>
+
+
+                    </div>
+
+
+                    <div class="grid-6 mt-10">
+
+                        <h2 class="mb-30  text-left"><b>Localização</b></h2>
+                        <label for="text">Cep:</label>
+                        <input type="text" class="dinline" id="cep" placeholder="" required="required" name="cep"
+                            ng-minlength="5" ng-maxlength="15" ng-model="personData.cep" />
+                        <label for="text">Endereço:</label>
+                        <input type="text" class="dinline" id="endereco" placeholder="" required="required" name="endereco"
+                            ng-minlength="5" ng-maxlength="15" ng-model="personData.adress" />
+                        <label for="text">Número:</label>
+                        <input type="text" class="dinline" id="number" placeholder="" required="required" name="number"
+                            ng-minlength="5" ng-maxlength="15" ng-model="personData.number" />
+                        <label for="text">Cidade:</label>
+                        <input type="text" class="dinline" id="cidade" placeholder="" required="required" name="cidade"
+                            ng-minlength="5" ng-maxlength="15" ng-model="personData.city" />
+                        <label for="text">UF:</label>
+                        <input type="text" class="dinline" id="uf" placeholder="" required="required" name="uf"
+                            ng-minlength="5" ng-maxlength="15" ng-model="personData.uf" />
+
+
+
+                    </div>
+
+            </div>
+
+            <div class="grid-12">
+                <button class="btn mt-10 mb-10" ng-class="{'btn-primary': registerForm.$valid, 'btn-secondary': registerForm.$invalid}"
+                    ng-disabled="registerForm.$invalid" ng-click="addConsultant()">Salvar</button>
+
+            </div>
+
+            </form>
+
+
+        </div>
+        <div ng-if="loading" style="text-align: center">
+            <img src="app/web/img/loading.gif" alt="Carregando">
+        </div>
+    </div>
