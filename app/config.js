@@ -1,9 +1,9 @@
-(function  () {
-    angular.module('app')
-      .constant('appSettings', {
-        uri : 'http://localhost:3000',
-        apiUrl : '/api/',
-        authUrl : '/auth/',
-      });
-  })();
-  //https://apiestoqueando.herokuapp.com
+(function () {
+  angular.module('app')
+    .constant('appSettings', {
+      uri: 'https://apiestoqueando.herokuapp.com',
+      apiUrl: '/api/',
+      authUrl: '/auth/',
+    });
+})();
+//
